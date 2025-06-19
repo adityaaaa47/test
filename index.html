@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing You, Ananya ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .clouds {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            opacity: 0.7;
+            animation: float-cloud 20s infinite linear;
+        }
+
+        .cloud:before {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+        }
+
+        @keyframes float-cloud {
+            0% { transform: translateX(-100px); }
+            100% { transform: translateX(calc(100vw + 100px)); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cute-couple {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+            gap: 20px;
+        }
+
+        .cute-figure {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            position: relative;
+            animation: bounce 2s infinite;
+        }
+
+        .aditya-figure {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            animation-delay: 0.5s;
+        }
+
+        .ananya-figure {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+        }
+
+        .cute-figure .face {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .cute-figure .eyes {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+        }
+
+        .cute-figure .mouth {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 25px;
+        }
+
+        .cute-figure .blush {
+            position: absolute;
+            top: 45px;
+            width: 15px;
+            height: 10px;
+            background: #ffb3ba;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        .cute-figure .blush.left { left: 15px; }
+        .cute-figure .blush.right { right: 15px; }
+
+        .love-bridge {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.2); }
+        }
+
+        .main-title {
+            color: #ff6b9d;
+            font-size: 3.5em;
+            margin: 30px 0;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            animation: rainbow 3s infinite;
+        }
+
+        @keyframes rainbow {
+            0% { color: #ff6b9d; }
+            25% { color: #4facfe; }
+            50% { color: #ff9a9e; }
+            75% { color: #a8edea; }
+            100% { color: #ff6b9d; }
+        }
+
+        .message-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            border: 3px solid #ffeaa7;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .message-card:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-conic-gradient(from 0deg, transparent 0deg 2deg, rgba(255,182,193,0.1) 2deg 4deg);
+            animation: rotate 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .kawaii-separator {
+            font-size: 2em;
+            margin: 20px 0;
+            animation: wiggle 2s infinite;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        .cute-animals {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .animal {
+            font-size: 3em;
+            margin: 10px;
+            animation: dance 3s infinite;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .animal:hover {
+            transform: scale(1.2);
+        }
+
+        .animal:nth-child(1) { animation-delay: 0s; }
+        .animal:nth-child(2) { animation-delay: 0.5s; }
+        .animal:nth-child(3) { animation-delay: 1s; }
+        .animal:nth-child(4) { animation-delay: 1.5s; }
+
+        @keyframes dance {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(-5deg) scale(1.1); }
+            50% { transform: rotate(0deg) scale(1.2); }
+            75% { transform: rotate(5deg) scale(1.1); }
+        }
+
+        .message {
+            font-size: 1.4em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .signature {
+            font-size: 1.8em;
+            color: #667eea;
+            font-weight: bold;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .signature:after {
+            content: '✨💕✨';
+            display: block;
+            margin-top: 10px;
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        .interactive-btn {
+            background: linear-gradient(45deg, #ff6b9d, #667eea);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-family: 'Comic Sans MS', cursive;
+            cursor: pointer;
+            margin: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interactive-btn:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .interactive-btn:hover:before {
+            width: 200px;
+            height: 200px;
+        }
+
+        .interactive-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .hidden-message {
+            display: none;
+            background: linear-gradient(45deg, #a8edea, #fed6e3);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 20px 0;
+            animation: popIn 0.8s ease-out;
+            border: 3px dashed #ff6b9d;
+        }
+
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0.3); }
+            70% { transform: scale(1.1); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .cute-cat {
+            display: inline-block;
+            margin: 0 10px;
+            animation: cat-walk 4s infinite;
+        }
+
+        @keyframes cat-walk {
+            0%, 100% { transform: translateX(0) scaleX(1); }
+            50% { transform: translateX(20px) scaleX(-1); }
+        }
+
+        .floating-emojis {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-emoji {
+            position: absolute;
+            font-size: 25px;
+            animation: float-up 8s infinite linear;
+        }
+
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .memory-box {
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #2d3436;
+            position: relative;
+            border: 3px solid #fdcb6e;
+        }
+
+        .memory-box:before {
+            content: '💭';
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            font-size: 30px;
+            background: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cute-garden {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .flower {
+            font-size: 2.5em;
+            animation: grow 3s infinite alternate;
+            cursor: pointer;
+        }
+
+        .flower:nth-child(odd) { animation-delay: 0.5s; }
+
+        @keyframes grow {
+            0% { transform: scale(0.8) rotate(-5deg); }
+            100% { transform: scale(1.2) rotate(5deg); }
+        }
+
+        .love-meter {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 3px solid #ff6b9d;
+        }
+
+        .meter-bar {
+            width: 100%;
+            height: 30px;
+            background: #f0f0f0;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .meter-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b9d, #4facfe, #a8edea);
+            border-radius: 15px;
+            animation: fill-meter 3s ease-in-out infinite alternate;
+            position: relative;
+        }
+
+        .meter-fill:after {
+            content: '💖';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes fill-meter {
+            0% { width: 95%; }
+            100% { width: 100%; }
+        }
+
+        @media (max-width: 600px) {
+            .main-title {
+                font-size: 2.5em;
+            }
+            .cute-figure {
+                width: 80px;
+                height: 80px;
+            }
+            .cute-figure .face {
+                width: 50px;
+                height: 50px;
+                top: 15px;
+                left: 15px;
+            }
+            .message-card {
+                padding: 25px;
+            }
+            .message {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clouds" id="clouds"></div>
+    <div class="floating-emojis" id="floating-emojis"></div>
+    
+    <div class="container">
+        <!-- Cute Couple Section -->
+        <div class="cute-couple">
+            <div class="cute-figure aditya-figure">
+                <div class="face">
+                    <div class="eyes">👀</div>
+                    <div class="mouth">😊</div>
+                </div>
+                <div class="blush left"></div>
+                <div class="blush right"></div>
+            </div>
+            <div class="love-bridge">💕</div>
+            <div class="cute-figure ananya-figure">
+                <div class="face">
+                    <div class="eyes">✨👀✨</div>
+                    <div class="mouth">😘</div>
+                </div>
+                <div class="blush left"></div>
+                <div class="blush right"></div>
+            </div>
+        </div>
+
+        <div class="kawaii-separator">୨୧ ‧₊˚ ⋅ ☆ ⋅ ˚₊‧ ୨୧</div>
+
+        <h1 class="main-title">Missing You So Much, Ananya!</h1>
+        
+        <!-- Cute Animals Dancing -->
+        <div class="cute-animals">
+            <div class="animal" onclick="makeSound('🐱')">🐱</div>
+            <div class="animal" onclick="makeSound('🐰')">🐰</div>
+            <div class="animal" onclick="makeSound('🐻')">🐻</div>
+            <div class="animal" onclick="makeSound('🐼')">🐼</div>
+        </div>
+
+        <div class="message-card">
+            <div class="message">
+                Every second without you feels like forever! 🥺 My heart does little flips whenever I think about your beautiful smile. You're like sunshine on a cloudy day, making everything brighter and more colorful! 🌈
+            </div>
+            
+            <div class="memory-box">
+                "You're not just my girlfriend, you're my best friend, my happy place, and my favorite person all rolled into one adorable package!" 💕🎁
+            </div>
+            
+            <div class="cute-garden">
+                <span class="flower" onclick="bloomFlower(this)">🌸</span>
+                <span class="flower" onclick="bloomFlower(this)">🌺</span>
+                <span class="flower" onclick="bloomFlower(this)">🌻</span>
+                <span class="flower" onclick="bloomFlower(this)">🌷</span>
+                <span class="flower" onclick="bloomFlower(this)">🌹</span>
+            </div>
+            
+            <div class="message">
+                I miss our silly conversations, your adorable laugh, and the way you scrunch your nose when you're thinking hard about something! 🤔💭 Distance can't diminish how much you mean to me - you're my whole world! 🌍✨
+            </div>
+
+            <div class="cute-cat">🐱‍👤</div>
+            <span style="font-size: 1.2em;">This kitty is walking back and forth just like me, restlessly missing you!</span>
+            <div class="cute-cat">🐱‍👤</div>
+            
+            <div class="signature">
+                Forever yours,<br>
+                Aditya 
+            </div>
+        </div>
+
+        <!-- Love Meter -->
+        <div class="love-meter">
+            <h3>💖 Love Meter for Ananya 💖</h3>
+            <div class="meter-bar">
+                <div class="meter-fill"></div>
+            </div>
+            <p>Level: INFINITE & BEYOND! 🚀✨</p>
+        </div>
+        
+        <button class="interactive-btn" onclick="revealMessage()">
+            🎁 Special Surprise Message 🎁
+        </button>
+        
+        <div class="hidden-message" id="hiddenMessage">
+            <h3>🌟 Secret Message Just for My Ananya 🌟</h3>
+            <p>You know what? Even the cutest animals on this page can't compete with how adorable you are! 🥰 You make my heart do happy dances, and I can't wait to hold you in my arms again. You're my favorite person in the whole universe! 🌌💫</p>
+            <div style="font-size: 2em; margin: 15px 0;">🎀💖🎀💖🎀</div>
+        </div>
+        
+        <button class="interactive-btn" onclick="createEmojiRain()">
+            🌈 Send Love Rain 🌈
+        </button>
+
+        <button class="interactive-btn" onclick="playWithAnimals()">
+            🎪 Make Animals Dance 🎪
+        </button>
+    </div>
+
+    <script>
+        // Create floating clouds
+        function createClouds() {
+            const cloudsContainer = document.getElementById('clouds');
+            for (let i = 0; i < 8; i++) {
+                const cloud = document.createElement('div');
+                cloud.className = 'cloud';
+                const size = Math.random() * 60 + 40;
+                cloud.style.width = size + 'px';
+                cloud.style.height = size * 0.6 + 'px';
+                cloud.style.top = Math.random() * 50 + '%';
+                cloud.style.animationDelay = Math.random() * 20 + 's';
+                cloud.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                cloudsContainer.appendChild(cloud);
+            }
+        }
+
+        // Create floating emojis
+        function createFloatingEmojis() {
+            const emojis = ['💕', '💖', '✨', '🌸', '🦋', '🌈', '⭐', '💫', '🎀', '💝'];
+            const container = document.getElementById('floating-emojis');
+            
+            setInterval(() => {
+                const emoji = document.createElement('div');
+                emoji.className = 'floating-emoji';
+                emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+                emoji.style.left = Math.random() * 100 + '%';
+                emoji.style.animationDuration = (Math.random() * 3 + 5) + 's';
+                container.appendChild(emoji);
+                
+                setTimeout(() => {
+                    emoji.remove();
+                }, 8000);
+            }, 1500);
+        }
+
+        // Animal sound effects (visual)
+        function makeSound(animal) {
+            const sounds = {
+                '🐱': 'Meow! 💕',
+                '🐰': 'Hop hop! 🥕',
+                '🐻': 'Roar! 🍯',
+                '🐼': 'Nom nom! 🎋'
+            };
+            
+            // Create temporary sound bubble
+            const bubble = document.createElement('div');
+            bubble.style.position = 'fixed';
+            bubble.style.top = '50%';
+            bubble.style.left = '50%';
+            bubble.style.transform = 'translate(-50%, -50%)';
+            bubble.style.background = 'rgba(255, 255, 255, 0.9)';
+            bubble.style.padding = '20px';
+            bubble.style.borderRadius = '20px';
+            bubble.style.fontSize = '1.5em';
+            bubble.style.zIndex = '1000';
+            bubble.style.animation = 'popIn 0.5s ease-out';
+            bubble.innerHTML = sounds[animal];
+            
+            document.body.appendChild(bubble);
+            setTimeout(() => bubble.remove(), 1500);
+        }
+
+        // Bloom flower effect
+        function bloomFlower(flower) {
+            const originalSize = flower.style.fontSize || '2.5em';
+            flower.style.transform = 'scale(1.8) rotate(360deg)';
+            flower.style.transition = 'all 0.5s ease';
+            
+            setTimeout(() => {
+                flower.style.transform = 'scale(1) rotate(0deg)';
+            }, 500);
+        }
+
+        // Reveal hidden message
+        function revealMessage() {
+            const hiddenMessage = document.getElementById('hiddenMessage');
+            hiddenMessage.style.display = 'block';
+        }
+
+        // Create emoji rain
+        function createEmojiRain() {
+            const rainEmojis = ['💖', '💕', '💗', '💘', '💝', '💞', '💟', '❤️', '🧡', '💛', '💚', '💙', '💜', '🤍', '🖤', '🤎'];
+            
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const emoji = document.createElement('div');
+                    emoji.className = 'floating-emoji';
+                    emoji.innerHTML = rainEmojis[Math.floor(Math.random() * rainEmojis.length)];
+                    emoji.style.left = Math.random() * 100 + '%';
+                    emoji.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                    emoji.style.animationDuration = (Math.random() * 2 + 4) + 's';
+                    document.getElementById('floating-emojis').appendChild(emoji);
+                    
+                    setTimeout(() => {
+                        emoji.remove();
+                    }, 6000);
+                }, i * 100);
+            }
+        }
+
+        // Make all animals dance
+        function playWithAnimals() {
+            const animals = document.querySelectorAll('.animal');
+            animals.forEach((animal, index) => {
+                setTimeout(() => {
+                    animal.style.transform = 'scale(1.5) rotate(720deg)';
+                    animal.style.transition = 'all 1s ease';
+                    
+                    setTimeout(() => {
+                        animal.style.transform = 'scale(1) rotate(0deg)';
+                        makeSound(animal.innerHTML);
+                    }, 1000);
+                }, index * 200);
+            });
+        }
+
+        // Initialize everything
+        createClouds();
+        createFloatingEmojis();
+        
+        // Add some random interactions
+        setInterval(() => {
+            const figures = document.querySelectorAll('.cute-figure');
+            figures.forEach(figure => {
+                figure.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    figure.style.transform = 'scale(1)';
+                }, 300);
+            });
+        }, 5000);
+    </script>
+</body>
+</html>
